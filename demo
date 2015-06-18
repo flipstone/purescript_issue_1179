@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+VERSION=$1
+
+rm -rf output
+
+MAKE_CMD="docker run \
+          -it --rm \
+          -v $PWD:/psc_make_bug \
+          -w /psc_make_bug centos \
+          $VERSION/psc-make \
+          src/*"
+
+
+echo "==== Doing first build works fine"
+$MAKE_CMD
+
+echo ""
+echo "==== But doing the second one fails"
+$MAKE_CMD
