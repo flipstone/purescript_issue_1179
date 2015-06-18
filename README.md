@@ -1,1 +1,1 @@
-A minimal example for purescript issue [https://github.com/purescript/purescript/issues/1179](1179)
+A minimal example for purescript issue [1179](https://github.com/purescript/purescript/issues/1179)
